@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/sha256"
 	"os"
+	"sync"
 )
 
 func main() {
@@ -19,8 +20,14 @@ func main() {
 	// retrieve all files in the provided path
 	files := getFilesList(*path)
 
+	var wg sync.WaitGroup
+
 	// process the file(s)
 	for _, file := range files {
-		processFile(file, mode, hash)
+		wg.Add(1)
+
+		go processFile(file, mode, hash, &wg)
 	}
+
+	wg.Wait()
 }

@@ -13,7 +13,7 @@ Below is a list of the flags requried to execute the application.
 
 `-e / -d`: indicate whether you would like to **encrypt** or **decrypt**. Exactly 1 of the flags must be provided.
 
-Example:
+## Example:
 
 Encrypt:
 

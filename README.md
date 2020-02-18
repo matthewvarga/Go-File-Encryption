@@ -2,7 +2,7 @@
 
 ## How It Works
 
-This is a basic file encryption script that utilizes the SHA256 hashing algorithm for computing the hash of the given password, which then uses it as the private key for 256-bit AES-GCM encryption.
+This is a basic file encryption script that utilizes the SHA256 hashing algorithm for computing the hash of the given password, which it then uses as the private key for 256-bit AES-GCM encryption.
 
 **WARNING**: I do not recommend using this for sensitive data as it has not been thuroughly tested and was built as a learning exercise. 
 
